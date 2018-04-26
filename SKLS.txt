@@ -1,0 +1,32 @@
+
+
+1. SQL---
+2. DatawareHouse concepts--schema/tables
+3. System bottlenects of ODS Data marts, Enterprise data
+4. Building-- ODS, Data Marts, EAI(Enterprise Application Integration)
+5. Conceptual, logical and physical data modelling
+6. MDM Concepts
+7. Data Governness Concepts and Processes--
+8. NoSQL DB --HBase
+9. Big Data Concepts
+10. Project brief information--
+
+
+EAI: https://ganeshwritesblog.wordpress.com/2017/12/18/enterprise-
+
+application-integration/
+
+OLAP vs OLTP: https://www.guru99.com/oltp-vs-olap.html
+
+ODS: https://www.tek-tips.com/viewthread.cfm?qid=5738
+https://www.quora.com/in/What-is-the-difference-between-operational-data-
+
+store-and-staging-area
+
+DW Schema and Tables: http://www.zentut.com/data-
+
+warehouse/dimensional-modeling/
+
+DW Interview Questions: https://dwbi.org/data-modelling/dimensional-
+
+model/58-top-50-dwbi-interview-questions-with-answers
