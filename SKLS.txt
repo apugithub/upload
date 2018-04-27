@@ -1,5 +1,4 @@
 
-
 1. SQL---
 2. DatawareHouse concepts--schema/tables
 3. System bottlenects of ODS Data marts, Enterprise data
@@ -12,21 +11,18 @@
 10. Project brief information--
 
 
-EAI: https://ganeshwritesblog.wordpress.com/2017/12/18/enterprise-
-
-application-integration/
+EAI: https://ganeshwritesblog.wordpress.com/2017/12/18/enterprise-application-integration/
 
 OLAP vs OLTP: https://www.guru99.com/oltp-vs-olap.html
 
 ODS: https://www.tek-tips.com/viewthread.cfm?qid=5738
-https://www.quora.com/in/What-is-the-difference-between-operational-data-
+https://www.quora.com/in/What-is-the-difference-between-operational-data-store-and-staging-area
 
-store-and-staging-area
+DW Schema and Tables: http://www.zentut.com/data-warehouse/dimensional-modeling/
 
-DW Schema and Tables: http://www.zentut.com/data-
+DW Interview Questions: https://dwbi.org/data-modelling/dimensional-model/58-top-50-dwbi-interview-questions-with-answers
 
-warehouse/dimensional-modeling/
+Data Governance: https://www.semarchy.com/data-governance/?hsCtaTracking=76c9f610-fede-408a-9bcb-1ffb17b5b1bf%7C4c9d4bcd-b4df-4765-885f-9e1a455ce8c2
 
-DW Interview Questions: https://dwbi.org/data-modelling/dimensional-
+MDM: https://blog.semarchy.com/backtobasics_data_classification
 
-model/58-top-50-dwbi-interview-questions-with-answers
