@@ -1,4 +1,34 @@
+Queries:
 
+Full time / contract Job
+
+How much is variable amount
+
+Summerize what are all the benifits or perks
+
+What is the health insurance provided to the employees
+
+Is Saturday off
+
+Provident Fund / Gratuity available
+
+After joining will I directly be absorbed in project or will undergo training
+
+If relocation allowence/Joining bonus will be provided  + Whether initial accomodation will be provided
+
+If there is any dress code
+
+1. Age of the company
+
+2. The VC behind the company
+
+3. Any existing big customers
+
+4. Vision of the company
+
+
+
+===========================================================================================================================
 1. SQL---
 2. DatawareHouse concepts--schema/tables
 3. System bottlenects of ODS Data marts, Enterprise data
