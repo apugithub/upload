@@ -1,33 +1,19 @@
 Queries:
 
 So I need to sign on the printed offer letter and send the scanned copy back as a token of acceptance?
-
 joining on or before 01st July 2018...(Sunday)...
-
 1. What is Minimum service agreement (which I need to sign).....
-
 2. Whether the package will be same in probation period too
-
 3. The variable component will be paid maximum 20% of CTC ..what about rest of 80%
-
 4. Food Card / Food reimbursement is available?
-
 Full time / contract Job
-
 What is the health insurance provided to the employees
-
 Is Saturday off
-
 Gratuity available
-
 If relocation allowence/Joining bonus will be provided  + Whether initial accomodation will be provided
-
 If there is any dress code
-
 1. Age of the company
-
 3. Any existing big customers
-
 4. Vision of the company
 
 
@@ -50,25 +36,19 @@ If there is any dress code
 
 
 EAI: https://ganeshwritesblog.wordpress.com/2017/12/18/enterprise-application-integration/
-
 OLAP vs OLTP: https://www.guru99.com/oltp-vs-olap.html
-
 ODS: https://www.tek-tips.com/viewthread.cfm?qid=5738
 https://www.quora.com/in/What-is-the-difference-between-operational-data-store-and-staging-area
-
 DW Schema and Tables: http://www.zentut.com/data-warehouse/dimensional-modeling/
-
 DW Interview Questions: https://dwbi.org/data-modelling/dimensional-model/58-top-50-dwbi-interview-questions-with-answers
-
 Data Governance: https://www.semarchy.com/data-governance/?hsCtaTracking=76c9f610-fede-408a-9bcb-1ffb17b5b1bf%7C4c9d4bcd-b4df-4765-885f-9e1a455ce8c2
-
 MDM: https://blog.semarchy.com/backtobasics_data_classification
 
+Interview date and Time:
 27th April 2018 6:50pm
 
 ***** HR: 8249744635/9853550825
 ******Intrvw: 9439301504
-
 
 
 ########################
