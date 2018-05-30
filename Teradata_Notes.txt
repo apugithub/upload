@@ -1,0 +1,154 @@
+
+
+1.	Duplicate records from a table:
+SELECT *
+FROM TableName
+WHERE (col1,col2,col3) IN (SELECT col1,col2,col3 
+                             FROM TABLENAME 
+                             GROUP BY 1,2,3 
+                             HAVING COUNT(*)>1);
+
+
+	SELECT col1, col2, col3, COUNT(*)
+	FROM
+	database.table
+	GROUP BY col1, col2, col3
+  HAVING COUNT(*) >1
+
+
+2.	Query : sel * qualify row_number() over(partition by product_id order by product_desc)>1 from product_table
+
+or
+
+Query: select product_id,product_desc,row_number() over(partition by product_id order by product_desc) r from product_table qualify r>1
+
+3.	How to check the table size in Teradata ?
+The following syntax is used to find the table size in Teradata 
+
+Syntax: Select databasename,tablename,sum(currentperm) from   dbc.tablesize where databasename='<databasename>' and  tablename='<tablename>' group by databasename,tablename;
+
+While running the above query, type your databasename in place of <databasename> and type your tablename in place of <tablename>
+
+
+4.	DDL
+DDL is short name of Data Definition Language, which deals with database schemas and descriptions, of how the data should reside in the database.
+•	CREATE – to create database and its objects like (table, index, views, store procedure, function and triggers)
+•	ALTER – alters the structure of the existing database
+•	DROP – delete objects from the database
+•	TRUNCATE – remove all records from a table, including all spaces allocated for the records are removed
+•	COMMENT – add comments to the data dictionary
+•	RENAME – rename an object
+DML
+DML is short name of Data Manipulation Language which deals with data manipulation, and includes most common SQL statements such SELECT, INSERT, UPDATE, DELETE etc, and it is used to store, modify, retrieve, delete and update data in database.
+•	SELECT – retrieve data from the a database
+•	INSERT – insert data into a table
+•	UPDATE – updates existing data within a table
+•	DELETE – Delete all records from a database table
+•	MERGE – UPSERT operation (insert or update)
+•	CALL – call a PL/SQL or Java subprogram
+•	EXPLAIN PLAN – interpretation of the data access path
+•	LOCK TABLE – concurrency Control
+DCL
+DCL is short name of Data Control Language which includes commands such as GRANT, and mostly concerned with rights, permissions and other controls of the database system.
+•	GRANT – allow users access privileges to database
+•	REVOKE – withdraw users access privileges given by using the GRANT command
+TCL
+TCL is short name of Transaction Control Language which deals with transaction within a database.
+•	COMMIT – commits a Transaction
+•	ROLLBACK – rollback a transaction in case of any error occurs
+•	SAVEPOINT – to rollback the transaction making points within groups
+•	SET TRANSACTION – specify characteristics for the transaction
+
+
+5.	Data Dictionary:
+a set of information describing the contents, format, and structure of a database and the relationship between its elements, used to control access to and manipulation of the database.
+
+6.	Macro:
+A macro can store one or more SQL statements. For frequent request we go for it.
+We cannot take procedural control statements in side macro (If-Else,For). Only one DDL(Create,Alter,Drop) statement we can take here
+With in macro we can write a DML(SELECT,INSERT,UPDATE,DELETE Statements)
+Macro statements are executed as a single transaction. If one of the SQL
+statements in Macro fails, then all the statements are rolled back.
+
+7.	Select DISTINCT RECORDS from emp table.
+select * from emp a where rowid = (select max(rowid)
+from emp b where a.empno=b.empno);
+
+8.	 How to delete duplicate rows in a table?   ---or question 1 can be followed
+delete from emp a where rowid != (select max(rowid)
+from emp b where a.empno=b.empno);
+
+9.	PERSING ENGINE :  1. Session Control: Controls log in or log off   2. Perser: Checks syntactical error + check privilege on objects.    3. Optimizer:  Develops least expensive plan + convert these plans into steps + passes these to dispatcher.   4. Dispacher: Send the steps to BYNET and also receives the result from bynet and send this to client back.
+
+10.	A row is assigned to a particular AMP based on the primary index value. Teradata uses
+hashing algorithm to determine which AMP gets the row.
+Following is a high level diagram on hashing algorithm.
+Following are the steps to insert the data.
+•The client submits a query.
+•The parser receives the query and passes the PI value of the record to the hashing
+algorithm.
+•The hashing algorithm hashes the primary index value and returns a 32 bit number,
+called Row Hash.
+•The higher order bits of the row hash (first 16 bits) is used to identify the hash map
+entry. The hash map contains one AMP #. Hash map is an array of buckets which
+contains specific AMP #.2
+•BYNET sends the data to the identified AMP.
+•AMP uses the 32 bit Row hash to locate the row within its disk.
+•If there is any record with same row hash, then it increments the uniqueness ID
+which is a 32 bit number. For new row hash, uniqueness ID is assigned as 1 and
+incremented whenever a record with same row hash is inserted.
+•The combination of Row hash and Uniqueness ID is called as Row ID.
+•Row ID prefixes each record in the disk.
+•Each table row in the AMP is logically sorted by their Row IDs.
+ 
+
+
+Advantages of stored procedure:
+Stored procedures reduce the network load between the client and the server.
+•Provides better security since the data is accessed through stored procedures
+instead of accessing them directly.
+•Gives better maintenance since the business logic is tested and stored in the server.
+BTEQ= Batch TEradata Query
+BYNET= BYNET, acronym for "BanYan NETwork," is a folded banyan switching network built upon the capacity of the YNET. It acts as a distributed multi-fabric inter-connect to link PEs, AMPs and nodes on a Massively Parallel Processing (MPP) system.
+
+Sored procedure example:
+CREATE PROCEDURE InsertSalary
+(
+IN in_EmployeeNo INTEGER, IN in_Gross INTEGER,
+IN in_Deduction INTEGER, IN in_NetPay INTEGER
+)
+BEGIN
+INSERT INTO Salary
+(
+EmployeeNo,
+Gross,
+Deduction,
+NetPay
+)
+VALUES
+(
+:in_EmployeeNo,
+:in_Gross,
+:in_Deduction,
+:in_NetPay
+);
+END;
+
+
+Group by:  reduces the number of records.  We need to include those columns in group by –in select statement.   For filter condition ‘having’ clause is used not ‘WHERE’
+
+Partition by: No of records will not be reduced.  In select we can use N number of columns, no restrictions. We can use ‘WHERE’ clause in filter condition.
+SELECT EmployeeNo, JoinedDate,RANK()
+OVER(PARTITION BY DeparmentNo ORDER BY JoinedDate) as Seniority
+FROM Employee;
+
+SELECT HASHAMP() + 1;   ==== returns number of AMPs used. 
+
+
+Transient Journal: To handle Transaction failure.
+•Fallback: To handle AMP failure.
+•Cliques: To handle Node failure.
+•RAID: To handle Disk failure.
+•Hot standby Node: To handle Node failure without affecting performance and
+restart.
+
