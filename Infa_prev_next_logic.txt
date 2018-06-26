@@ -1,0 +1,15 @@
+
+
+prev and cur u have to do in exp base don its o/p u need to pass it to TCL..
+1  min
+v_cur=colA value
+v_prev=iif(isnull(v_prev),'N',v_prev)
+o_flag=iif(v_prev<>v_cur,iif(v_prev='N',1,0),1)
+v_prev=v_cur
+in TCL
+pass o_flag,colA,colB to TCL
+iif(o_flag=0,TC_COMMI_BEFORE,TC_CONTINUE_TRANSACTION)
+
+
+
+https://informaticareference.wordpress.com/category/advanced-concepts/
