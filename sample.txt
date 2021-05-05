@@ -1,0 +1,33 @@
+====================== nested JSON for Country and Service
+[
+  {
+    "country": "DE",
+    "services": [
+      {
+        "name": "DE_Service_1",
+        "status": "SUCCESS",
+        "sql": "select * from.."
+      },
+      {
+        "name": "DE_Service_2",
+        "status": "SUCCESS",
+        "sql": "select * from.."
+      }
+    ]
+  },
+  {
+    "country": "US",
+    "services": [
+      {
+        "name": "US_Service_1",
+        "status": "SUCCESS",
+        "sql": "select * from.."
+      },
+      {
+        "name": "US_Service_2",
+        "status": "SUCCESS",
+        "sql": "select * from.."
+      }
+    ]
+  }
+]
