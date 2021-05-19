@@ -1,0 +1,10 @@
+https://www.codementor.io/@garethdwyer/building-a-crud-application-with-flask-and-sqlalchemy-dm3wv7yu2
+
+https://www.codeply.com/go/7aCOy9o5F6/bootstrap-edit-table-row
+
+https://www.jqueryscript.net/table/Stylish-Editable-Table-Plugin-with-jQuery-Bootstrap-2-3-Editable-Table.html
+
+https://blog.hubspot.com/website/make-a-table-in-html
+
+https://www.blog.pythonlibrary.org/2017/12/14/flask-101-adding-editing-and-displaying-data/#content
+
