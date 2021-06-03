@@ -1,3 +1,6 @@
+
+df = df.filter((~(f.trim(df.Job).isin("'IT_PROG'")))& (f.substring(f.trim(df.DOJ),5,3)=="FEB")).agg({'Sal':'Avg'}).show()  
+
 Adding Edit in HTML Table:
 https://www.codementor.io/@garethdwyer/building-a-crud-application-with-flask-and-sqlalchemy-dm3wv7yu2
 
